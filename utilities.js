@@ -16,13 +16,17 @@ function addMoney(donationBalanceField, donationBalance, donatedMoney){
 }
 
 // remove money from main account function
-function removeMoney(donatedMoney){
+function removeMoney(donatedMoney,text){
     const totalBalance = findTextInputValue("total-balance");
     if(donatedMoney<0 || isNaN(donatedMoney)) {
         alert("Please give a valid amount");
     }else{
         if(totalBalance>donatedMoney) {
             document.getElementById("total-balance").innerText = totalBalance-donatedMoney;
+             // showing modal
+            document.getElementById("confirmation-modal").classList.remove("hidden");
+             // history created
+            history(donatedMoney, text);
         }
         else{
             alert("Your don't have sufficient balance");
@@ -39,13 +43,7 @@ function donation(donationButton, donationInput, donationBalance, text){
         const donationBalanceField = document.getElementById(donationBalance);
         const donationTotalBalance = findTextInputValue(donationBalance);
         addMoney(donationBalanceField, donationTotalBalance, donatedMoney);
-        removeMoney(donatedMoney);
-
-        // showing modal
-        document.getElementById("confirmation-modal").classList.remove("hidden");
-
-        // history created
-        history(donatedMoney, text);
+        removeMoney(donatedMoney,text);
     })
 }
 

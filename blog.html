@@ -9,26 +9,58 @@
 
 </head>
 <body>
-    <header class="bg-slate-100 w-full px-6 md:px-14 lg:px-24 py-8">
-        <div class="flex justify-between items-center">
-            <button class="bg-green-400 py-4 px-8 rounded-xl font-bold text-xl">Blog</button>
+    <header class=" w-full fixed z-50 top-0 bg-slate-100 backdrop-blur-xl bg-white/30 ">
+        <div class="bg-slate-100 px-6 md:px-14 lg:px-24 py-8">
+          <div class="flex justify-between items-center">
+            <button class="bg-green-400 py-4 px-8 rounded-xl font-bold text-xl"><a href="index.html">Home</a></button>
             <div class="flex items-center justify-center gap-3 cursor-pointer">
                 <img src="assets/logo.png" alt="logo">
                 <h1 class="font-bold text-xl">Donate Bangladesh</h1>
             </div>
             <div class="flex items-center justify-center gap-3">
                 <img src="assets/coin.png" alt="image of coin">
-                <h1 class="font-bold text-xl"><span>5500</span> BDT</h1>
+                <h1 class="font-bold text-xl"><span id="total-balance">5500</span> BDT</h1>
             </div>
+          </div>
         </div>
     </header>
 
-    <main class="px-6 md:px-14 lg:px-24 my-24">
-        <div class="mb-12 flex justify-center items-center gap-6">
-            <button class="bg-green-400 py-4 px-8 rounded-xl font-bold text-xl">Donation</button>
-            <button class="border py-4 px-8 rounded-xl font-bold text-xl">History</button>
+    <main class="px-6 md:px-14 lg:px-24 my-24 mt-72 ">
+        <!-- Accordian -->
+        <div class="collapse collapse-plus bg-slate-100 mt-6 border shadow-md">
+            <input type="radio" name="my-accordion-3" checked="checked" />
+            <div class="collapse-title text-xl font-medium">What is Document Object Module?</div>
+            <div class="collapse-content">
+                <p>The Document Object Model (DOM) is a programming interface for representing HTML, XML, 
+                    and other structured documents as a tree of nodes. Each node represents a part of the document, 
+                    such as an element, attribute, text node, or comment. The DOM provides a way to access and manipulate these nodes using JavaScript</p>
+            </div>
         </div>
-        <!-- history cards -->
+        <div class="collapse collapse-plus bg-slate-100 mt-6 border shadow-md">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+            <div class="collapse-content">
+                <p>There are several ways to select an element from the DOM using JavaScript. We can select element by using id, class name, query selector and tag name.</p>
+            </div>
+        </div>
+        <div class="collapse collapse-plus bg-slate-100 mt-6 border shadow-md">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-medium">What is the event delegation in the context of DOM, and why it is useful?</div>
+            <div class="collapse-content">
+                <p>Event Delegation in the context of the DOM is a technique where you attach an event listener to a parent element instead of directly to each 
+                    child element. This allows you to handle events for multiple elements efficiently, especially when the number of child elements is dynamic or large.</p>
+            </div>
+        </div>
+        <div class="collapse collapse-plus bg-slate-100 mt-6 border shadow-md">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+            <div class="collapse-content">
+                <p>To manipulate attribute first select the element, then get the attribute and finally set the value of the attribute.
+                    <br>
+                    to manipulate the style of an element, first select the element, then add css using element.style.cssProperty = "value".
+                </p>
+            </div>
+        </div>
          
     </main>
 </body>
